@@ -18,7 +18,7 @@ from datetime import datetime, timezone
 from dateutil.tz import tzlocal
 from decimal import Decimal
 from functools import partial, partialmethod
-from finplot.live import Live
+from finplot.finplot.live import Live
 from math import ceil, floor, fmod
 import numpy as np
 import os.path
@@ -3073,7 +3073,7 @@ if code is not None and \
 # default to black-on-white
 pg.widgets.GraphicsView.GraphicsView.wheelEvent = partialmethod(_wheel_event_wrapper, pg.widgets.GraphicsView.GraphicsView.wheelEvent)
 # use finplot instead of matplotlib
-pd.set_option('plotting.backend', 'finplot.pdplot')
+pd.set_option('plotting.backend', 'finplot.finplot.pdplot')
 # pick up win resolution
 try:
     import ctypes
